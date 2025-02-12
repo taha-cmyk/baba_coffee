@@ -9,7 +9,7 @@ collections:
     files:
       - label: "About Page"
         name: "about"
-        file: "./content/about.md"
+        file: "https://baba-coffee.netlify.app/content/about.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
