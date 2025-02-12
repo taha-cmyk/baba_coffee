@@ -1,0 +1,109 @@
+{{ define "main" }}
+<div class="max-w-4xl mx-auto">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-['Playfair_Display'] font-bold text-amber-900 mb-6">Our Story</h1>
+        <div class="bg-white rounded-lg p-8 shadow-md">
+            <div class="prose prose-amber mx-auto">
+                {{ .Content }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-['Playfair_Display'] font-bold text-amber-900 text-center mb-8">Our Values</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {{ range .Params.values }}
+            <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4">
+                <div class="bg-amber-100 p-3 rounded-full">
+                    {{ if eq .icon "coffee" }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    {{ else if eq .icon "users" }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    {{ else if eq .icon "leaf" }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                    {{ else }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                    {{ end }}
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">{{ .title }}</h3>
+                    <p class="text-amber-700">{{ .description }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-['Playfair_Display'] font-bold text-amber-900 text-center mb-8">Meet Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {{ range .Params.team }}
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="bg-amber-100 h-48 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">{{ .name }}</h3>
+                    <p class="text-amber-600 text-sm mb-3">{{ .position }}</p>
+                    <p class="text-amber-700">{{ .description }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-amber-100 rounded-lg p-8 text-center">
+        <h2 class="text-2xl font-['Playfair_Display'] font-bold text-amber-900 mb-4">Come Visit Us</h2>
+        <p class="text-amber-800 mb-6">Experience our warm hospitality and exceptional coffee for yourself.</p>
+        <div class="space-x-4">
+            <a href="/menu" class="inline-block bg-amber-900 text-amber-50 px-6 py-2 rounded-full hover:bg-amber-800 transition">
+                View Menu
+            </a>
+            <a href="/contact" class="inline-block bg-amber-50 text-amber-900 px-6 py-2 rounded-full hover:bg-amber-200 transition">
+                Contact Us
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- Parallax Scroll Effect -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const handleScroll = () => {
+        const elements = document.querySelectorAll('.bg-white');
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+            
+            if (isVisible) {
+                element.style.transform = `translateY(${(rect.top / window.innerHeight) * 20}px)`;
+                element.style.opacity = 1 - (Math.abs(rect.top) / window.innerHeight);
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+});
+</script>
+
+<style>
+.bg-white {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+</style>
+{{ end }}

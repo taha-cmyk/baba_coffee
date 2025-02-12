@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-['Playfair_Display'] font-bold text-amber-900 text-center mb-12">Our Menu</h1>
+
+    <!-- Menu Categories -->
+    <div class="space-y-12">
+        {{ range .Site.Data.menu.categories }}
+        <section class="bg-white rounded-lg p-6 shadow-md">
+            <h2 class="text-2xl font-['Playfair_Display'] font-bold text-amber-900 mb-6">{{ .name }}</h2>
+            
+            <div class="grid gap-6">
+                {{ range .items }}
+                <div class="border-b border-amber-100 last:border-0 pb-6 last:pb-0">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-amber-900">{{ .name }}</h3>
+                            <p class="text-amber-700 text-sm">{{ .description }}</p>
+                        </div>
+                        {{ if not .sizes }}
+                        <span class="text-lg font-bold text-amber-900">${{ printf "%.2f" .price }}</span>
+                        {{ end }}
+                    </div>
+
+                    {{ if .sizes }}
+                    <div class="mt-3">
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                            {{ range .sizes }}
+                            <div class="bg-amber-50 rounded p-2 text-center">
+                                <span class="block text-sm text-amber-900">{{ .name }}</span>
+                                <span class="block font-bold text-amber-900">${{ printf "%.2f" .price }}</span>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
+    </div>
+
+    <!-- Note Section -->
+    <div class="mt-8 p-4 bg-amber-100 rounded-lg">
+        <p class="text-amber-800 text-sm text-center">
+            Prices are subject to change. Please ask our staff about daily specials and seasonal offerings.
+        </p>
+    </div>
+</div>
+
+
+{{ end }}
