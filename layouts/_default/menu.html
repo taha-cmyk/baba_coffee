@@ -17,7 +17,7 @@
                             <p class="text-amber-700 text-sm">{{ .description }}</p>
                         </div>
                         {{ if not .sizes }}
-                        <span class="text-lg font-bold text-amber-900">${{ printf "%.2f" .price }}</span>
+                        <span class="text-lg font-bold text-amber-900">MAD{{ printf "%.2f" .price }}</span>
                         {{ end }}
                     </div>
 
@@ -27,7 +27,7 @@
                             {{ range .sizes }}
                             <div class="bg-amber-50 rounded p-2 text-center">
                                 <span class="block text-sm text-amber-900">{{ .name }}</span>
-                                <span class="block font-bold text-amber-900">${{ printf "%.2f" .price }}</span>
+                                <span class="block font-bold text-amber-900">MAD{{ printf "%.2f" .price }}</span>
                             </div>
                             {{ end }}
                         </div>
