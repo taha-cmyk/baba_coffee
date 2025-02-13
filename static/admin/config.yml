@@ -23,7 +23,7 @@ collections:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Position", name: "position", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
-          - label: "Core Values" 
+          - label: "Core Values"
             name: "values"
             widget: "list"
             fields:
@@ -32,9 +32,6 @@ collections:
               - {label: "Icon", name: "icon", widget: "select", options: ["coffee", "users", "leaf", "wand-2"]}
           - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "menu"
-    label: "Menu"
-    files:
       - file: "data/menu.yaml"
         label: "Menu Categories"
         name: "categories"
@@ -66,7 +63,7 @@ collections:
         label: "Menu Settings"
         name: "menu_settings"
         fields:
-          - {label: "Footer Note", name: "footer_note", widget: "text", default: "Prices are subject to change. Please ask our staff about daily specials and seasonal offerings."} 
+          - {label: "Footer Note", name: "footer_note", widget: "text", default: "Prices are subject to change. Please ask our staff about daily specials and seasonal offerings."}
 
   - name: "gallery"
     label: "Gallery"
@@ -89,5 +86,4 @@ collections:
             widget: "string"
           - label: "Caption"
             name: "caption"
-            widget: "string"              
-        
+            widget: "string"
