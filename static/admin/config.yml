@@ -6,6 +6,7 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
+
   - name: "pages"
     label: "Pages"
     files:
@@ -30,4 +31,63 @@ collections:
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Icon", name: "icon", widget: "select", options: ["coffee", "users", "leaf", "wand-2"]}
           - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "menu"
+    label: "Menu"
+    files:
+      - file: "data/menu.yaml"
+        label: "Menu Categories"
+        name: "categories"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - {label: "Category Name", name: "name", widget: "string"}
+              - label: "Menu Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Item Name", name: "name", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Single Price", name: "price", widget: "number", required: false, value_type: "float", min: 0, step: 0.01}
+                  - label: "Sizes"
+                    name: "sizes"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - {label: "Size Name", name: "name", widget: "string"}
+                      - {label: "Price", name: "price", widget: "number", value_type: "float", min: 0, step: 0.01}
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "data/menu_settings.yaml"
+        label: "Menu Settings"
+        name: "menu_settings"
+        fields:
+          - {label: "Footer Note", name: "footer_note", widget: "text", default: "Prices are subject to change. Please ask our staff about daily specials and seasonal offerings."} 
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - label: "Image"
+            name: "src"
+            widget: "image"
+          - label: "Alt Text"
+            name: "alt"
+            widget: "string"
+          - label: "Caption"
+            name: "caption"
+            widget: "string"              
         
