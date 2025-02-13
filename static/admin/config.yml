@@ -30,7 +30,7 @@ collections:
               - {label: "Icon", name: "icon", widget: "select", options: ["coffee", "users", "leaf", "wand-2"]}
       - label: "Menu Page"
         name: "Menu"
-        file: "data/menu.md"
+        file: "data/menu.yml"
         fields:
           - label: "Categories"
             name: "categories"
