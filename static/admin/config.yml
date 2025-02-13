@@ -29,5 +29,5 @@ collections:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Icon", name: "icon", widget: "select", options: ["coffee", "users", "leaf", "wand-2"]}
-              - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown"}
         
