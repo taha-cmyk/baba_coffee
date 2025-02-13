@@ -5,38 +5,32 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "content/pages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Layout", name: "layout", widget: "select", options: ["default", "about", "contact", "home"]}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Team Members"
-        name: "team"
-        widget: "list"
-        required: false
-        fields:
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Position", name: "position", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
-      - label: "Core Values"
-        name: "values"
-        widget: "list"
-        required: false
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/about.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
-          - {label: "Icon", name: "icon", widget: "select", options: ["coffee", "users", "leaf", "wand-2"]}
-
-  - name: "menu"
-    label: "Menu"
-    files:
-      - file: "data/menu.yaml"
-        label: "Menu Categories"
-        name: "categories"
+          - {label: "Layout", name: "layout", widget: "hidden", default: "about"}
+          - label: "Team Members"
+            name: "team"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Position", name: "position", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+          - label: "Core Values" 
+            name: "values"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Icon", name: "icon", widget: "select", options: ["coffee", "users", "leaf", "wand-2"]}
+      - label: "Menu Page"
+        name: "Menu"
+        file: "data/menu.md"
         fields:
           - label: "Categories"
             name: "categories"
@@ -57,35 +51,3 @@ collections:
                     fields:
                       - {label: "Size Name", name: "name", widget: "string"}
                       - {label: "Price", name: "price", widget: "number", value_type: "float", min: 0, step: 0.01}
-
-  - name: "settings"
-    label: "Settings"
-    files:
-      - file: "data/menu_settings.yaml"
-        label: "Menu Settings"
-        name: "menu_settings"
-        fields:
-          - {label: "Footer Note", name: "footer_note", widget: "text", default: "Prices are subject to change. Please ask our staff about daily specials and seasonal offerings."}
-
-  - name: "gallery"
-    label: "Gallery"
-    folder: "content/gallery"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        fields:
-          - label: "Image"
-            name: "src"
-            widget: "image"
-          - label: "Alt Text"
-            name: "alt"
-            widget: "string"
-          - label: "Caption"
-            name: "caption"
-            widget: "string"
