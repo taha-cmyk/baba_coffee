@@ -6,6 +6,9 @@ team:
     position: Owner
     description: With over 15 years of experience in specialty coffee, Sarah's
       passion for the perfect brew led to the creation of Coffee Haven.
+  - name: Taha
+    position: Developper
+    description: dev of the site
 values:
   - title: Quality
     description: We source only the finest coffee beans and ingredients, ensuring
@@ -23,5 +26,13 @@ values:
     description: Every drink is crafted with care and attention to detail by our
       skilled baristas.
     icon: wand-2
+<<<<<<< HEAD
 
 ---
+=======
+intro: "![]()"
+---
+Founded in 2010, Coffee Haven began with a simple mission: to create a warm and welcoming space where quality coffee brings people together. What started as a small corner café has grown into a beloved community hub, while maintaining our commitment to exceptional coffee and personal service
+
+![](/images/screenshot-2024-06-09-170534.png)
+>>>>>>> 126d43ab4ce3f8a0e7ba5282d7425335838f4c86
