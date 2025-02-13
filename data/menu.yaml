@@ -4,39 +4,18 @@ categories:
       - name: Espresso
         description: Pure and intense shot of coffee
         price: 10
-        sizes:
-          - name: Single
-            price: 3.5
-          - name: Double
-            price: 20
+        
       - name: Cappuccino
         description: Equal parts espresso, steamed milk, and milk foam
         price: 4.5
-        sizes:
-          - name: Small
-            price: 4.5
-          - name: Medium
-            price: 5
-          - name: Large
-            price: 5.5
   - name: Cold Coffee
     items:
       - name: Iced Latte
         description: Espresso with cold milk and ice
         price: 4.75
-        sizes:
-          - name: Regular
-            price: 4.75
-          - name: Large
-            price: 5.75
       - name: Cold Brew
         description: 24-hour steeped cold coffee
         price: 4.25
-        sizes:
-          - name: Regular
-            price: 4.25
-          - name: Large
-            price: 5.25
   - name: Pastries
     items:
       - name: Croissant
