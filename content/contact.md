@@ -22,9 +22,5 @@ contact_info:
   email: coffeebaba2024@gmail.com
   social:
     - platform: Instagram
-      url: https://instagram.com/coffeehaven
-    - platform: Facebook
-      url: https://facebook.com/coffeehaven
-    - platform: Twitter
-      url: https://twitter.com/coffeehaven
+      url: https://instagram.com/coffee.baba.chaouen
 ---
