@@ -80,26 +80,6 @@
     </section>
 </div>
 
-<!-- Parallax Scroll Effect -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const handleScroll = () => {
-        const elements = document.querySelectorAll('.bg-white');
-        elements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-            
-            if (isVisible) {
-                element.style.transform = `translateY(${(rect.top / window.innerHeight) * 20}px)`;
-                element.style.opacity = 1 - (Math.abs(rect.top) / window.innerHeight);
-            }
-        });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-});
-</script>
 
 <style>
 .bg-white {
