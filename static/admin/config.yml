@@ -53,3 +53,15 @@ collections:
                     fields:
                       - {label: "Size Name", name: "name", widget: "string"}
                       - {label: "Price", name: "price", widget: "number", value_type: "float", min: 0, step: 0.01}
+
+      - label: "Gallery Page"
+        name: "gallery"
+        file: "content/gallery.md"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "string"}
+              - {label: "Alt Text", name: "alt", widget: "string"}
