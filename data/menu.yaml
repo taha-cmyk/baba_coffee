@@ -4,23 +4,71 @@ categories:
       - name: Espresso
         description: Pure and intense shot of coffee
         price: 10
-        
       - name: Cappuccino
         description: Equal parts espresso, steamed milk, and milk foam
-        price: 4.5
+        price: 13
+      - name: Ginger Coffee
+        price: 12
+      - name: Coffe & Milk
+        price: 10
+      - name: Americano
+        price: 13
+      - name: Flat White
+        price: 13
+      - name: Macchiato
+        price: 13
+      - name: Baba Coffee
+        price: 15
   - name: Cold Coffee
     items:
       - name: Iced Latte
         description: Espresso with cold milk and ice
-        price: 4.75
-      - name: Cold Brew
-        description: 24-hour steeped cold coffee
-        price: 4.25
-  - name: Pastries
+        price: 15
+      - name: Iced Flat White
+        description: ""
+        price: 15
+      - name: Iced Pour-over Coffee
+        price: 15
+      - name: Iced Macchiato
+        price: 15
+      - name: Iced Americano
+        price: 15
+      - name: Iced Baba Coffee
+        price: 20
+  - name: Tea
     items:
-      - name: Croissant
-        description: Buttery, flaky pastry
-        price: 3.5
-      - name: Chocolate Muffin
-        description: Rich chocolate chip muffin
-        price: 3.75
+      - name: Honey Ginger Tea
+        description: ""
+        price: 10
+      - name: Matcha Ginger Tea
+        description: ""
+        price: 10
+      - name: Louiza Tea
+        price: 10
+      - name: Tea With Mint
+        price: 10
+      - name: Tea With Local Herbs
+        price: 13
+  - name: Extra
+    items:
+      - name: Almond Milk
+        price: 7
+        description: .
+      - name: Lactose Free-Milk
+        price: 5
+        description: .
+      - name: Goat Fresh-Milk
+        price: 7
+        description: .
+      - name: Vanilla Milk
+        price: 7
+        description: .
+      - name: Flavored Milk
+        price: 5
+        description: .
+      - name: Toppings
+        price: 3
+        description: .
+      - name: Mineral Wter
+        price: 3
+        description: .
