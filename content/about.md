@@ -6,9 +6,6 @@ team:
     position: Owner
     description: With over 15 years of experience in specialty coffee, Sarah's
       passion for the perfect brew led to the creation of Coffee Haven.
-  - name: Taha
-    position: Developper
-    description: dev of the site
 values:
   - title: Quality
     description: We source only the finest coffee beans and ingredients, ensuring
