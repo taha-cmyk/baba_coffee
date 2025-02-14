@@ -3,11 +3,11 @@ title: Contact Us
 layout: contact
 business_hours:
   - day: Monday - Friday
-    hours: 7:00 AM - 8:00 PM
+    hours: 6:30 AM - 00:00 PM
   - day: Saturday
-    hours: 8:00 AM - 9:00 PM
+    hours: 7:00 AM - 00:00 PM
   - day: Sunday
-    hours: 8:00 AM - 6:00 PM
+    hours: 7:00 AM - 00:00 PM
 
 location:
   address: Rue Atlas Av. Allal El fassi
@@ -19,7 +19,7 @@ location:
 
 contact_info:
   phone: +212539999190
-  email: coffeebaba2024gmail.com
+  email: coffeebaba2024@gmail.com
   social:
     - platform: Instagram
       url: https://instagram.com/coffeehaven
