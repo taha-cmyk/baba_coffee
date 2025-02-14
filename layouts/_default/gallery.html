@@ -8,10 +8,10 @@
             {{ range $index, $image := .Params.images }}
             <div 
                 class="relative bg-white rounded-lg shadow-lg overflow-hidden group hover:scale-[1.02] transition-transform"
-                onclick="openModal('https://picsum.photos/800/1200', '{{ .alt }}', '{{ .caption }}')"
+                onclick="openModal('{{.image}}', '{{ .alt }}', '{{ .caption }}')"
             >
                 <img 
-                    src="https://picsum.photos/200/300" 
+                    src="{{.image}}" 
                     alt="{{ .alt }}" 
                     class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover cursor-pointer"
                 >
