@@ -4,8 +4,7 @@ layout: about
 team:
   - name: Soufian
     position: Owner
-    description: With over 15 years of experience in specialty coffee, Sarah's
-      passion for the perfect brew led to the creation of Coffee Haven.
+    description: Coffee owner , traveler
 values:
   - title: Quality
     description: We source only the finest coffee beans and ingredients, ensuring
